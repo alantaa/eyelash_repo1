@@ -1,8 +1,12 @@
-/** @type {import('tailwindcss').Config} */
+import("tailwindcss").Config;
 module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
-    extend: {},
+    fontFamily: {
+      philosopher: ["Philosopher", "sans-serif"],
+      poppins: ["Poppins", "sans-serif"],
+    },
+    extends: {},
   },
-  plugins: [],
+  plugins: [require("tailwindcss"), require("autoprefixer")],
 };
